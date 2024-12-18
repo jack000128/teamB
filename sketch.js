@@ -928,6 +928,7 @@ function drawStations() {
     strokeWeight(strokeValue * 3);
     textSize(txtSize);
     textAlign(RIGHT, CENTER);
+    textFont(fontNamsanM);
 
     // 텍스트 관련 전역 변수 업데이트
     textSize(txtSize);
@@ -1042,7 +1043,13 @@ function mousePressed() {
         mouseY < stationTextY + stationTextHeight / 2;
 
       if (isMouseOver) {
-        if (zoomLevel <= 12) {
+        if (zoomLevel <= 11) {
+          myMap.map.easeTo({
+            center: [station.lng + offsetLng * 1.9, station.lat],
+            zoom: zoomLevel,
+          });
+        }
+        else if (zoomLevel <= 12) {
           myMap.map.easeTo({
             center: [station.lng + offsetLng, station.lat],
             zoom: zoomLevel,

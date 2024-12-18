@@ -1,0 +1,6 @@
+assets/from0000to1974.geojson filter=lfs diff=lfs merge=lfs -text
+assets/from1975to1984.geojson filter=lfs diff=lfs merge=lfs -text
+assets/from1985to1994.geojson filter=lfs diff=lfs merge=lfs -text
+assets/from1995to2004.geojson filter=lfs diff=lfs merge=lfs -text
+assets/from2005to2014.geojson filter=lfs diff=lfs merge=lfs -text
+assets/from2015to2024.geojson filter=lfs diff=lfs merge=lfs -text

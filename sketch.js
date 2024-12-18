@@ -206,7 +206,7 @@ function setup() {
   });
 
   // 이전 버튼 생성
-  prevButton = new YearButton(width * 0.25, 72, 200, 40, "10년 전", () => {
+  prevButton = new YearButton(width * 0.25, height / 10, 200, 40, "10년 전", () => {
     if (currentRangeIndex > 0) {
       console.log("이전 클릭");
       currentRangeIndex--;
@@ -218,7 +218,7 @@ function setup() {
   });
 
   // 다음 버튼 생성
-  nextButton = new YearButton(width * 0.75, 72, 200, 40, "10년 후", () => {
+  nextButton = new YearButton(width * 0.75, height / 10, 200, 40, "10년 후", () => {
     if (currentRangeIndex < yearRanges.length - 1) {
       console.log("다음 클릭");
       currentRangeIndex++;
@@ -441,12 +441,12 @@ function drawView1() {
   textSize(32);
   textFont(fontNamsanEB);
   textAlign(CENTER, CENTER);
-  text(`${yearRanges[currentRangeIndex].slice(-4)}`, width / 2, 60);
+  text(`${yearRanges[currentRangeIndex].slice(-4)}`, width / 2, height / 10 - 17);
 
   textSize(14);
   textFont(fontNamsanB);
   textAlign(CENTER, CENTER);
-  text("스크롤해서 확대해 보세요! 다 보면 10년 후를 누르세요", width / 2, 93);
+  text("스크롤해서 확대해 보세요! 다 보면 10년 후를 누르세요", width / 2, height / 10 + 20);
 
   /* 미니맵 */
   miniMapX = toggleButtonStartX - 13;
@@ -705,12 +705,12 @@ function drawView2() {
   textSize(32);
   textFont(fontNamsanEB);
   textAlign(CENTER, CENTER);
-  text(`${emphasisCategory == null ? "역을 자유롭게 탐색해봐요" : emphasisCategory}`, width / 2, 60);
+  text(`${emphasisCategory == null ? "역을 자유롭게 탐색해봐요" : emphasisCategory}`, width / 2, height / 10 - 17);
 
   textSize(14);
   textFont(fontNamsanB);
   textAlign(CENTER, CENTER);
-  text(emphasisCategory == null ? "죄측 하단의 편의 기능과 우측의 지도 조작법을 참고해주세요" : "아이콘 있는 노란색 역을 클릭해보세요.", width / 2, 93);
+  text(emphasisCategory == null ? "죄측 하단의 편의 기능과 우측의 지도 조작법을 참고해주세요" : "아이콘 있는 노란색 역을 클릭해보세요.", width / 2, height / 10 + 20);
 
   /* 토글 버튼 영역 */
   // 판넬
@@ -1110,8 +1110,8 @@ function windowResized() {
     view1Button.updatePosition(width / 2, height / 7 * 4);
     view2Button.updatePosition(width / 2, (height / 7) * 4 + 150);
 
-    prevButton.updatePosition(width * 0.25, 72);
-    nextButton.updatePosition(width * 0.75, 72);
+    prevButton.updatePosition(width * 0.25, height / 10);
+    nextButton.updatePosition(width * 0.75, height / 10);
 
     alignButton.updatePosition(
       width - toggleButtonWidth - toggleButtonStartX, // 버튼 X 위치

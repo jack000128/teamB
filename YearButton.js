@@ -23,7 +23,7 @@ class YearButton {
     fill(this.isHovered ? color(255,215,0) : 255); // 호버 시 색상 변경
     textAlign(CENTER, CENTER); // 텍스트 정렬
     textSize(32); // 텍스트 크기
-    text(this.label, this.x, this.y); // 버튼 텍스트 렌더링
+    text(this.label, this.x, this.y-2); // 버튼 텍스트 렌더링
   }
 
   // 마우스가 버튼 위에 있는지 확인

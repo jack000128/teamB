@@ -831,7 +831,8 @@ function createToggleButtons() {
   toggleButtons = []; // 기존 버튼 배열 초기화
 
   toggleButtonStartX = 40; // 버튼 시작 X 좌표
-  toggleButtonStartY = height * 0.64; // 버튼 시작 Y 좌표
+  toggleButtonStartY = height * 0.67; // 버튼 시작 Y 좌표
+  // toggleButtonStartY = height * 0.64; // 버튼 시작 Y 좌표
   toggleButtonWidth = 230; // 버튼 너비
   toggleButtonHeight = 40; // 버튼 높이
   toggleButtonSpacing = 2; // 버튼 간격

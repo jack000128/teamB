@@ -1084,6 +1084,12 @@ function keyPressed() {
       updateYearButtonLabels();
       console.log("시작 화면으로 전환 완료.");
     }, 200); // 200ms 대기
+
+    for (let button of toggleButtons) {
+      button.isClicked = false;
+    }
+    popup.hide();
+    clickedStation = null;
   }
 }
 
